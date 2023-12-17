@@ -46,7 +46,7 @@ Then, we can express the steps performed as 2<sup>1</sup>+2<sup>2</sup>+...+2<su
 
 By the rules for Big-$\theta$ notation, the runtime of this function is:
 
- $\theta$(F(n))=$\theta$(2<sup>n</sup>)
+ $\theta$(F(n)) = $\theta$(2<sup>n</sup>)
 
 ## Iterative Function
 
