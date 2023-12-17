@@ -1,6 +1,6 @@
 # Fibonacci Sequence
 ## Recusive Function
-Our recursive function for finding the *nth* element of the fibonacci sequence is relatively simple.
+Our recursive function for finding the n<sup>th</sup> element of the fibonacci sequence is relatively simple.
 - If n is 0, return 0
 - If n is 1, return 1
 - Else, return the value of n-1 element plus the value of the n-2 element.
@@ -49,9 +49,32 @@ By the rules for Big-$\theta$ notation, the runtime of this function is:
  $\theta$(F(n)) = $\theta$(2<sup>n</sup>)
 
 ## Iterative Function
-
+Our iterative function for finding the n<sup>th</sup> element of the fibonacci sequence requires iterating n times.
+~~~
+def iterative_finder(index):
+    if index == 0:
+        return 0
+    first = 1
+    second = 0
+    for i in range(1, index):
+        temp = first
+        first += second
+        second = temp
+    return first
+~~~
 ### Runtime
-## Comparison Graph
-![Graph showing difference in runtime](/rec_vs_iterative.png)
+Thankfully, calculating the runtime for this algorithm is much simpler. For index n, we must perform n-2 iterations.
 
+Therefore, if we have F(n) representing our iterative function, $\theta$(F(n)) = $\theta$(n)
+## Comparison Graph
+The following graph illustrates the incredible jump in time efficiency when changing from a recursive to an iterative technique.
+
+![Graph showing difference in runtime](/rec_vs_iterative.png)
+## Can we do better?
+
+The iterative technique is much better than the recursive technique, but it still has time complexity of n.
+
+![Graph showing scaling of higher values of n](/iterative_vs_bestfit.png)
+
+If we could find a technique with log(n) or even 1 complexity, this would vastly outpace our iterative technique at higher values of the fibonacci sequence.
 ## Closed Form Equation

@@ -9,9 +9,10 @@ def rec_finder(index):
 def iterative_finder(index):
     if index == 0:
         return 0
-    
-    vals = [0 for i in range(index+1)]
-    vals[1] = 1
-    for i in range(2, index+1):
-        vals[i] = vals[i-1] + vals[i-2]
-    return vals[-1]
+    first = 1
+    second = 0
+    for i in range(1, index):
+        temp = first
+        first += second
+        second = temp
+    return first
