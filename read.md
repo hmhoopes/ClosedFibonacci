@@ -44,7 +44,9 @@ So, we traverse n-1 levels.
 
 Then, we can express the steps performed as 2<sup>1</sup>+2<sup>2</sup>+...+2<sup>n-1</sup>
 
-By the rules for Big-$\theta$ notation, the runtime of this function is $\theta$(2<sup>n</sup>)
+By the rules for Big-$\theta$ notation, the runtime of this function is:
+
+ $\theta$(F(n))=$\theta$(2<sup>n</sup>)
 
 ## Iterative Function
 
