@@ -3,7 +3,7 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 
-max = 20000
+max = 1400
 closed_times = [0 for i in range(max)]
 iter_times = [0 for i in range(max)]
 inaccuracy = [0 for i in range(max)]
@@ -23,14 +23,9 @@ for i in range(max):
 
     closed_times[i] = closed_time
     iter_times[i] = iter_time
-    inaccuracy[i] = abs(iter_time - closed_time)
     #print(f"\trec val: {rec_val}, elapsed time: {rec_time} \n\titer. val: {iter_val}, elapsed time: {iter_time}")
 
 plt.plot(x, iter_times, label="iter. times")
 plt.plot(x, closed_times, label="closed times")
-plt.legend()
-plt.show()
-
-plt.plot(x, inaccuracy, label="inaccuracy")
 plt.legend()
 plt.show()

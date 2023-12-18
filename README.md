@@ -163,5 +163,3 @@ This inaccuracy will become worse for higher values of the sequence, as they req
 ## Runtime Comparison
 
 ![image](/imgs/iter_vs_closed.png)
-
-![image](/imgs/inaccuracy.png)
