@@ -81,12 +81,10 @@ If we could find a technique with log(n) or even 1 complexity, this would vastly
 ### Matrices as Linear Transformations
 A matrix can be used to represent any linear transformation. For the fibonacci sequence, if we define our Matrix M as
 
-$$
-M=\left(\begin{array}{cc} 
+$$M=\left(\begin{array}{cc} 
 0 & 1\\ 
 1 & 1
-\end{array}\right)
-$$ 
+\end{array}\right)$$
 Then, 
 $$
 \left(\begin{array}{cc} 
