@@ -159,6 +159,9 @@ $\theta$(F(n)) = $\theta$(1)
 ### Trade Off
 This solution is the most efficient way to find values in the fibonacci sequence. However, it suffers from inaccuracy due to the fundamental inaccuracies of floating point arithmetic in computers. Therefore, it won't specify the exact value, but a value extremely close to the correct value.
 This inaccuracy will become worse for higher values of the sequence, as they require more arithmetic.
-### Demonstration
 
 ## Runtime Comparison
+
+![image](/iter_vs_closed.png)
+
+![image](/inaccuracy.png)
