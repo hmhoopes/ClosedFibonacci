@@ -314,3 +314,15 @@ def closed_form(index):
     return PDPinv[0, 1]
     #Because x0 = 0 and x1 = 1, matrix-vector multiplication would return the element in row 0, column 1
 ~~~
+
+### Runtime
+This function will doesn't scale with N, meaning that it has a constant runtime 
+
+$\theta$(F(n)) = $\theta$(1)
+
+### Trade Off
+This solution is the most efficient way to find values in the fibonacci sequence. However, it suffers from inaccuracy due to the fundamental inaccuracies of floating point arithmetic in computers. Therefore, it won't specify the exact value, but a value extremely close to the correct value.
+This inaccuracy will become worse for higher values of the sequence, as they require more arithmetic.
+### Demonstration
+
+## Runtime Comparison
