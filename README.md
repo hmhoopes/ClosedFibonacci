@@ -69,12 +69,12 @@ Therefore, if we have F(n) representing our iterative function, $\theta$(F(n)) =
 ## Comparison Graph
 The following graph illustrates the incredible jump in time efficiency when changing from a recursive to an iterative technique.
 
-![Graph showing difference in runtime](/rec_vs_iterative.png)
+![Graph showing difference in runtime](/imgs/rec_vs_iterative.png)
 ## Can we do better?
 
 The iterative technique is much better than the recursive technique, but it still has time complexity of n.
 
-![Graph showing scaling of higher values of n](/iterative_vs_bestfit.png)
+![Graph showing scaling of higher values of n](/imgs/iterative_vs_bestfit.png)
 
 If we could find a technique with log(n) or even 1 complexity, this would vastly outpace our iterative technique at higher values of the fibonacci sequence.
 ## Matrices, Diagonalisation, and Closed Form Solutions
@@ -162,6 +162,6 @@ This inaccuracy will become worse for higher values of the sequence, as they req
 
 ## Runtime Comparison
 
-![image](/iter_vs_closed.png)
+![image](/imgs/iter_vs_closed.png)
 
-![image](/inaccuracy.png)
+![image](/imgs/inaccuracy.png)
