@@ -81,126 +81,28 @@ If we could find a technique with log(n) or even 1 complexity, this would vastly
 ### Matrices as Linear Transformations
 A matrix can be used to represent any linear transformation. For the fibonacci sequence, if we define our Matrix M as
 
-$$\begin{aligned}M= \left(\begin{array}{cc} 
-0 & 1\\ 
-1 & 1
-\end{array}\right)\end{aligned}$$
+![equation](https://latex.codecogs.com/svg.image?%5Cbegin%7Baligned%7DM=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0&1%5C%5C1&1%5Cend%7Barray%7D%5Cright)%5Cend%7Baligned%7D)
+
 Then, 
-$$
-\left(\begin{array}{cc} 
-0 & 1\\ 
-1 & 1
-\end{array}\right)
-\left(\begin{array}{cc}
-x_n\\
-x_{n+1}
-\end{array}\right)
-=
-\left(\begin{array}{cc}
-x_{n+1}\\
-x_{n+2}
-\end{array}\right)
-$$ 
+
+![equation](https://latex.codecogs.com/svg.image?%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0&1%5C%5C1&1%5Cend%7Barray%7D%5Cright)%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7Dx_n%5C%5Cx_%7Bn&plus;1%7D%5Cend%7Barray%7D%5Cright)=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7Dx_%7Bn&plus;1%7D%5C%5Cx_%7Bn&plus;2%7D%5Cend%7Barray%7D%5Cright))
 
 This is true because, if you perform the matrix vector multiplication, the equation simplifies to:
 
-$$
-\left(\begin{array}{cc}
-0*x_n+1*x_{n+1}\\
-1*x_n+1*x_{n+1}
-\end{array}\right)
-=
-\left(\begin{array}{cc}
-x_{n+1}\\
-x_{n+2}
-\end{array}\right)
-$$ 
+![equation](https://latex.codecogs.com/svg.image?%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0*x_n&plus;1*x_%7Bn&plus;1%7D%5C%5C1*x_n&plus;1*x_%7Bn&plus;1%7D%5Cend%7Barray%7D%5Cright)=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7Dx_%7Bn&plus;1%7D%5C%5Cx_%7Bn&plus;2%7D%5Cend%7Barray%7D%5Cright))
 
 Which follows the formula for the fibonacci sequence.
 We can test this for a few values of n.
-$$
-x_0=0, x_1=1, x_2=1, x_3=2, x_4=3, x_5=5
-$$
-$$
-\left(\begin{array}{cc} 
-0 & 1\\ 
-1 & 1
-\end{array}\right)
-\left(\begin{array}{cc}
-x_0\\
-x_{1}
-\end{array}\right)
-=
-\left(\begin{array}{cc}
-0+1\\
-0+1
-\end{array}\right)
-=
-\left(\begin{array}{cc}
-1(x_{1})\\
-1(x_{2})
-\end{array}\right)
-$$
-$$
-\left(\begin{array}{cc} 
-0 & 1\\ 
-1 & 1
-\end{array}\right)
-\left(\begin{array}{cc}
-x_1\\
-x_2
-\end{array}\right)
-=
-\left(\begin{array}{cc}
-0+1\\
-1+1
-\end{array}\right)
-=
-\left(\begin{array}{cc}
-1(x_{2})\\
-2(x_{3})
-\end{array}\right)
-$$
-$$
-\left(\begin{array}{cc} 
-0 & 1\\ 
-1 & 1
-\end{array}\right)
-\left(\begin{array}{cc}
-x_2\\
-x_3
-\end{array}\right)
-=
-\left(\begin{array}{cc}
-0+2\\
-1+2
-\end{array}\right)
-=
-\left(\begin{array}{cc}
-2(x_{3})\\
-3(x_{4})
-\end{array}\right)
-$$
-$$
-\left(\begin{array}{cc} 
-0 & 1\\ 
-1 & 1
-\end{array}\right)
-\left(\begin{array}{cc}
-x_3\\
-x_4
-\end{array}\right)
-=
-\left(\begin{array}{cc}
-0+3\\
-2+3
-\end{array}\right)
-=
-\left(\begin{array}{cc}
-3(x_{4})\\
-5(x_{5})
-\end{array}\right)
-$$ 
+
+![equation](https://latex.codecogs.com/svg.image?x_0=0,x_1=1,x_2=1,x_3=2,x_4=3,x_5=5%20)
+
+![equation](https://latex.codecogs.com/svg.image?%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0&1%5C%5C1&1%5Cend%7Barray%7D%5Cright)%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7Dx_0%5C%5Cx_%7B1%7D%5Cend%7Barray%7D%5Cright)=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0&plus;1%5C%5C0&plus;1%5Cend%7Barray%7D%5Cright)=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D1(x_%7B1%7D)%5C%5C1(x_%7B2%7D)%5Cend%7Barray%7D%5Cright))
+
+![equation](https://latex.codecogs.com/svg.image?%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0&1%5C%5C1&1%5Cend%7Barray%7D%5Cright)%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7Dx_1%5C%5Cx_2%5Cend%7Barray%7D%5Cright)=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0&plus;1%5C%5C1&plus;1%5Cend%7Barray%7D%5Cright)=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D1(x_%7B2%7D)%5C%5C2(x_%7B3%7D)%5Cend%7Barray%7D%5Cright))
+
+![equation](https://latex.codecogs.com/svg.image?%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0&1%5C%5C1&1%5Cend%7Barray%7D%5Cright)%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7Dx_2%5C%5Cx_3%5Cend%7Barray%7D%5Cright)=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0&plus;2%5C%5C1&plus;2%5Cend%7Barray%7D%5Cright)=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D2(x_%7B3%7D)%5C%5C3(x_%7B4%7D)%5Cend%7Barray%7D%5Cright))
+
+![equation](https://latex.codecogs.com/svg.image?%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0&1%5C%5C1&1%5Cend%7Barray%7D%5Cright)%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7Dx_3%5C%5Cx_4%5Cend%7Barray%7D%5Cright)=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D0&plus;3%5C%5C2&plus;3%5Cend%7Barray%7D%5Cright)=%5Cleft(%5Cbegin%7Barray%7D%7Bcc%7D3(x_%7B4%7D)%5C%5C5(x_%7B5%7D)%5Cend%7Barray%7D%5Cright))
 ### Powers of Matrices
 Using proof by mathematical induction, we can prove
 $$
